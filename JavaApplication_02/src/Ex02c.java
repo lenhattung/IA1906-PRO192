@@ -35,5 +35,10 @@ public class Ex02c {
         
         int z = 5;
         z+=10; // z = z+10;
+        
+        System.out.println(5 +"+" + 2 +"="+5+2);
+        System.out.println(5 +"+" + 2 +"="+(5+2));
+        
+        System.out.println(5 +"%" + 2 +"="+5%2);
     }
 }
