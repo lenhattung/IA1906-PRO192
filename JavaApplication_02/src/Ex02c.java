@@ -8,7 +8,7 @@
  *
  * @author tungi
  */
-public class Ex02b {
+public class Ex02c {
     public static void main(String[] args){
         int a = 5;
         int b = 2;
