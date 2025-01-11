@@ -1,9 +1,7 @@
 ----
 Link Zoom:
 https://uw-edu-pl.zoom.us/j/93428681733
-----
-Videos: 
-Slot 1 - https://youtu.be/Rj_1tmySTK8
+
 ----
 LMS (làm bài Quizz/Workshop/Assignment):
 Course ID: PRO192LNT / PASSWORD: PRO192LNT@2025
@@ -16,3 +14,8 @@ Support: https://www.ultraviewer.net/vi/download.html
 Tools:
 - JDK 8 : https://www.oracle.com/java/technologies/javase/javase8-archive-downloads.html
 - Netbeans 8.2 : https://taimienphi.vn/download-netbean-ide-5221/8.2-phien-ban
+
+----
+Videos: 
+Slot 1 - https://youtu.be/Rj_1tmySTK8
+Slot 2 - https://youtu.be/Dvn9duyJjJo
