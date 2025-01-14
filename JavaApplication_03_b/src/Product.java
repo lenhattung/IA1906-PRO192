@@ -1,6 +1,5 @@
 
 public class Product {
-
     private String ProductId;
     private String Name;
     private double Price;
@@ -81,6 +80,4 @@ public class Product {
         return "Product{" + "ProductId=" + ProductId + ", Name=" + Name + ", Price=" + Price + ", Quantity=" + Quantity + ", Category=" + Category + '}';
     }
 
-   
-    
 }
