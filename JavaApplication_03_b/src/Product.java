@@ -1,4 +1,17 @@
+/*
+Product:
+- ProductId: Must not be null/empty.
+- Name: Must not be null/empty and limited to 100 characters
+- Price: Must be positive and below 1,000,000
+- Quantity: Must be non-negative and below 10,000
+- Category: Must not be null/empty and limited to 50 characters
 
++ constructors
++ gettes/setters
++ toString
++ calculateDiscountPrice(double discountPercent)
+
+*/
 public class Product {
     private String ProductId;
     private String Name;
