@@ -10,7 +10,6 @@ Product:
 + gettes/setters
 + toString
 + calculateDiscountPrice(double discountPercent)
-
 */
 public class Product {
     private String ProductId;
