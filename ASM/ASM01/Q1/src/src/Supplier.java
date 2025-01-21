@@ -9,6 +9,7 @@
  * @author tungi
  */
 public class Supplier {
+
     private int id;
     private String name;
     private String address;
@@ -17,17 +18,19 @@ public class Supplier {
 
     public Supplier() {
         this.id = 0;
+        // this.name = "" => setName("");
         setName("");
         this.address = "";
-        this.phone = "";
+        setPhone("");
         this.status = false;
     }
 
     public Supplier(int id, String name, String address, String phone) {
         this.id = id;
+        // this.name = name => setName(name);
         setName(name);
         this.address = address;
-        this.phone = phone;
+        setPhone(phone);
     }
 
     public int getId() {
@@ -39,21 +42,21 @@ public class Supplier {
     }
 
     public String getName() {
-        return name;
+        return toTitleCase(name);
     }
 
     public void setName(String name) {
-        if(name!=null && !name.isEmpty() && name.length()>=5 && name.length() <=50){
+        if (name != null && !name.isEmpty() && name.length() >= 5 && name.length() <= 50) {
             this.name = name;
             this.status = true;
-        }else{
+        } else {
             this.name = "no name";
             this.status = false;
         }
     }
 
     public String getAddress() {
-        return address;
+        return toTitleCase(address);
     }
 
     public void setAddress(String address) {
@@ -66,7 +69,12 @@ public class Supplier {
 
     public void setPhone(String phone) {
         // phone.startsWith("0") => true / false
-        this.phone = phone;
+        // this.phone = phone;
+        if (phone != null && !phone.isEmpty()  && phone.startsWith("0")&& ((phone.length() == 9) || (phone.length() == 10))) {
+            this.phone = phone;
+        }else{
+            this.phone= "000.000.0000";
+        }
     }
 
     public boolean getStatus() {
@@ -76,6 +84,34 @@ public class Supplier {
     public void setStatus(boolean status) {
         this.status = status;
     }
+
     
+    public String toTitleCase(String s){
+        // Xoa khoang trang o 2 dau
+        s = s.trim();
+        String[] temp = s.split(" ");
+        // xu ly tung tu
+        for (int i = 0; i < temp.length; i++) {
+            String word = temp[i];
+            if(word.length()>0){
+                word = word.substring(0, 1).toUpperCase()+word.substring(1).toLowerCase();
+            }
+            temp[i] = word;
+        }
+        // noi lai thanh chuoi
+        s = String.join(" ", temp);
+        
+        // Loai bo khoang trang du thua
+        while(s.indexOf("  ")>-1){
+            s = s.replace("  ", " ");
+        }
+        
+        return s;
+    }
     
+//    public static void main(String[] args) {
+//        Supplier s = new Supplier();
+//        System.out.println(s.toTitleCase("nguyen xuan           son"));
+//        //  System.out.println("Nguyen Xuan           Son".indexOf("Son"));
+//    }
 }
