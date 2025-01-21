@@ -80,6 +80,10 @@ public class Supplier {
     public boolean getStatus() {
         return status;
     }
+    
+    public String getStatusValue(){
+        return (status)?"Available":"Unavailable";
+    }
 
     public void setStatus(boolean status) {
         this.status = status;
@@ -108,10 +112,11 @@ public class Supplier {
         
         return s;
     }
+
+    @Override
+    public String toString() {
+        return getId()+","+getName()+","+getAddress()+","+getPhone()+","+getStatusValue();
+    }
     
-//    public static void main(String[] args) {
-//        Supplier s = new Supplier();
-//        System.out.println(s.toTitleCase("nguyen xuan           son"));
-//        //  System.out.println("Nguyen Xuan           Son".indexOf("Son"));
-//    }
+    
 }
