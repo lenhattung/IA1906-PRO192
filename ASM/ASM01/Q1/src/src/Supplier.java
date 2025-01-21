@@ -65,6 +65,7 @@ public class Supplier {
     }
 
     public void setPhone(String phone) {
+        // phone.startsWith("0") => true / false
         this.phone = phone;
     }
 
