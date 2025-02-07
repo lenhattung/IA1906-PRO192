@@ -49,5 +49,4 @@ public class Rectangle {
         return length * width;
     }
     
-   
 }
