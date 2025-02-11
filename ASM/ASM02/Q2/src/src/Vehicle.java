@@ -19,7 +19,7 @@ public class Vehicle {
     }
 
     public Vehicle(String id, String name, double price, int quantity) {
-        this.id = id;
+        setId(id);
         this.name = name;
         this.price = price;
         this.quantity = quantity;
