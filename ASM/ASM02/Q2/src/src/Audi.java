@@ -9,8 +9,5 @@
  * @author tungi
  */
 public class Audi extends Vehicle{
-    private String id;
-    private String name;
-    private double price;
-    private int quantity;
+    
 }
