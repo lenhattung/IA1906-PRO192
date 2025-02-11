@@ -53,6 +53,11 @@ public class Vehicle {
     }
 
     public void setName(String name) {
+        if (name == null || name.length() < 5 || name.length() > 50) {
+            this.name = "new vehicle";
+            return;
+        }
+
         this.name = name;
     }
 
@@ -61,6 +66,10 @@ public class Vehicle {
     }
 
     public void setPrice(double price) {
+        if (price < 1 || price > 1000000) {
+            this.price = 1;
+            return;
+        }
         this.price = price;
     }
 
@@ -69,6 +78,10 @@ public class Vehicle {
     }
 
     public void setQuantity(int quantity) {
+        if (quantity < 1 || quantity > 1000) {
+            this.quantity = 1;
+            return;
+        }
         this.quantity = quantity;
     }
 
