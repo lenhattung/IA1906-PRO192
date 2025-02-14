@@ -135,7 +135,7 @@ public class Vehicle {
 
     @Override
     public String toString() {
-        return id + ", " + getName() + ", " + String.format("%.2f", price) + ", " + quantity + ", " + String.format("%.2f", getSubTotal());
+        return id + "," + getName() + "," + String.format("%.2f", price) + "," + quantity + "," + String.format("%.2f", getSubTotal());
     }
 
 }
