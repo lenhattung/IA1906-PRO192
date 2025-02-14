@@ -129,13 +129,13 @@ public class Vehicle {
         return result.toString().trim(); // xóa khoảng trắng cuối cùng
     }
 
-    public double getSubToTal() {
+    public double getSubTotal() {
         return this.price * this.quantity;
     }
 
     @Override
     public String toString() {
-        return id + ", " + getName() + ", " + String.format("%.2f", price) + ", " + quantity + ", " + String.format("%.2f", getSubToTal());
+        return id + ", " + getName() + ", " + String.format("%.2f", price) + ", " + quantity + ", " + String.format("%.2f", getSubTotal());
     }
 
 }
