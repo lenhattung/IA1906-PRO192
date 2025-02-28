@@ -39,10 +39,10 @@ public class Coffee extends Beverage {
 
     public void setType(String type) {
         if (type != null
-                && type.equals("special")
-                && type.equals("high")
-                && type.equals("medium")
-                && type.equals("low")) {
+                || type.equals("special")
+                || type.equals("high")
+                || type.equals("medium")
+                || type.equals("low")) {
             this.type = type;
         } else {
             this.type = "medium";
@@ -51,7 +51,7 @@ public class Coffee extends Beverage {
 
     @Override
     public String toString() {
-        return getId() + "," + getName() + "," + String.format("%.3f", getPrice()) + "," + getQuantity() + "," + String.format("%.3f", getPrice() * getQuantity());
+        return getId() + "," + getName() + "," + getType() + "," + getExpire() + "," + String.format("%.3f", getPrice()) + "," + getQuantity() + "," + String.format("%.3f", subTotal());
     }
 
     @Override
@@ -66,6 +66,6 @@ public class Coffee extends Beverage {
         if (type.equals("medium") && expire <= 30) {
             rate = 0.5;
         }
-        return getPrice()*getQuantity()*rate;
+        return getPrice() * getQuantity() * rate;
     }
 }
