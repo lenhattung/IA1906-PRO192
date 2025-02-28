@@ -16,6 +16,10 @@ public abstract class Beverage {
     private int quantity;
 
     public Beverage() {
+        setId("");
+        setName("");
+        setPrice(0);
+        setQuantity(0);
     }
 
     public Beverage(String id, String name, double price, int quantity) {
@@ -87,7 +91,7 @@ public abstract class Beverage {
 
     @Override
     public String toString() {
-        return getId()+","+getName()+","+String.format("%.3f", getPrice())+","+getQuantity()+","+String.format("%.3f", getPrice()*getQuantity());
+        return getId() + "," + getName() + "," + String.format("%.3f", getPrice()) + "," + getQuantity() + "," + String.format("%.3f", getPrice() * getQuantity());
     }
 
 }
