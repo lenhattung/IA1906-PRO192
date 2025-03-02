@@ -28,5 +28,13 @@ public class R {
           System.out.println("(+84)123456789".matches(phone_regex));
           System.out.println("(84)123456789".matches(phone_regex));
           System.out.println("+84123456789".matches(phone_regex));
+          
+          // Xxxxxxxxxx
+          // X: A, B, C  => [ABC]\\d{9}
+          
+          // xxXx-xxx.xx
+          // 10D1-123.45
+          
+          // \\d{2}[A-Z]\\d\\-\\d{3}\\.\\d{2}
     }
 }
