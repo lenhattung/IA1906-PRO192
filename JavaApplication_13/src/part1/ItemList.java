@@ -80,17 +80,54 @@ public class ItemList {
         }
         return -1;
     }
-    
-    public boolean updateItem(int index){
-        if(index>=0 && index < numberOfItems){
+
+    public boolean updateItem(int index) {
+        if (index >= 0 && index < numberOfItems) {
             list[index].input();
             return true;
         }
         return false;
     }
-    
-    public boolean removeItem(int index){
-        
+
+    public boolean removeItem(int index) {
+        // numberOfItems = 10
+        // remove index 5
+        if (index >= 0 && index < numberOfItems) {
+            for (int i = index; i < numberOfItems; i++) {
+                list[i] = list[i + 1];
+            }
+            numberOfItems--;
+            return true;
+        }
+        return false;
     }
+
+    public void displayItemsByType(String type) {
+        for (Item item : list) {
+            if (type.equals("Vase") && (item instanceof Vase)) {
+                System.out.println(item);
+            }
+            if (type.equals("Statue") && (item instanceof Statue)) {
+                System.out.println(item);
+            }
+            if (type.equals("Painting") && (item instanceof Painting)) {
+                System.out.println(item);
+            }
+        }
+
     }
+
+    //this method sorts items in ascending order based on their values.
+    public void sortItems() {
+        for (int i = 0; i < numberOfItems; i++) {
+            for (int j = numberOfItems - 1; j > i; j--) {
+                if (list[i].getValue() < list[j - 1].getValue()) {
+                    Item tmp = list[j];
+                    list[j] = list[j - 1];
+                    list[j - 1] = tmp;
+                }
+            }
+        }
+    }
+
 }

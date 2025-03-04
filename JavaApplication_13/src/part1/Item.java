@@ -67,4 +67,11 @@ public class Item {
         System.out.println("Value: "+ this.getValue());
         System.out.println("Creator: "+ this.getCreator());
     }
+
+    @Override
+    public String toString() {
+        return "..... add code..";
+    }
+    
+    
 }

@@ -9,6 +9,10 @@ package part1;
  *
  * @author tungi
  */
-public class Statue extends Item{
-    
+public class Statue extends Item {
+
+    @Override
+    public String toString() {
+        return "";
+    }
 }

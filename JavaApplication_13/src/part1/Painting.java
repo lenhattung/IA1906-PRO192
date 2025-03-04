@@ -10,5 +10,10 @@ package part1;
  * @author tungi
  */
 public class Painting extends Item{
+
+    @Override
+    public String toString() {
+        return "";
+    }
     
 }
