@@ -10,6 +10,7 @@ package part1;
  * @author tungi
  */
 public class ItemList {
+
     private Item[] list;
     private int numberOfItems;
     private int MAX = 100;
@@ -42,35 +43,54 @@ public class ItemList {
     public void setMAX(int MAX) {
         this.MAX = MAX;
     }
-    
-    public boolean addItem(Item item){
-        if(item==null || numberOfItems>=MAX){
+
+    public boolean addItem(Item item) {
+        if (item == null || numberOfItems >= MAX) {
             return false;
         }
         list[numberOfItems] = item;
         numberOfItems++;
         return true;
     }
-    
-    public void displayAll(){
-        if(numberOfItems==0){
+
+    public void displayAll() {
+        if (numberOfItems == 0) {
             System.out.println("The list is empty!");
         }
         for (int i = 0; i < numberOfItems; i++) {
             System.out.println(list[i]);
         }
     }
-    
-    public Item findItem(String creator){
+
+    public Item findItem(String creator) {
         for (Item item : list) {
-            if(item.getCreator().equals(creator)){
+            if (item.getCreator().equals(creator)) {
                 return item;
             }
         }
         return null;
     }
+
+    public int findItemIndex(String creator) {
+        for (int i = 0; i < numberOfItems; i++) {
+            Item item = list[i];
+            if (item.getCreator().equals(creator)) {
+                return i;
+            }
+        }
+        return -1;
+    }
     
-    public int findItemIndex(String creator){
-       
+    public boolean updateItem(int index){
+        if(index>=0 && index < numberOfItems){
+            list[index].input();
+            return true;
+        }
+        return false;
+    }
+    
+    public boolean removeItem(int index){
+        
+    }
     }
 }
