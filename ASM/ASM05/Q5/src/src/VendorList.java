@@ -1,5 +1,6 @@
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -46,5 +47,13 @@ public class VendorList extends ArrayList<Vendor>{
             total += v.getSale();
         }
         return total;
+    }
+    
+    public void printVendorList(){
+        ArrayList<Vendor> temp = (ArrayList<Vendor>)this.clone();
+        Collections.sort(temp); // Sắp xếp
+        for (Vendor vendor : temp) {
+            System.out.println(vendor);
+        }
     }
 }
