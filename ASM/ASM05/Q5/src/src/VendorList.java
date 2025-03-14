@@ -54,9 +54,11 @@ public class VendorList extends ArrayList<Vendor> {
 
     public void printVendorList() {
         ArrayList<Vendor> temp = (ArrayList<Vendor>) this.clone();
+        // Cach 1 => phai viet compareTo trong Vendor\
+        // Khuyen khich lam cach 1
         Collections.sort(temp); // Sắp xếp
 
-//        // Cach 2
+//        // Cach 2 => Khong phai viet compareTo trong Vendor
 //        Collections.sort(temp, new Comparator<Vendor>() {
 //            @Override
 //            public int compare(Vendor o1, Vendor o2) {
